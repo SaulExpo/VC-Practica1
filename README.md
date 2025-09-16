@@ -3,10 +3,10 @@
 ### Contenidos
 
 [Preparación](#preparación)  
-[Tablero de ajedrez](#tarea-1-Tablero-de-ajedreza)  
+[Tablero de ajedrez](#tarea-1-tablero-de-ajedreza)  
 [Imagen estilo Mondrian](#tarea-2-imagen-estilo-mondrian)  
 [Modificar el plano de una imágen](#tarea-3-modificar-el-plano-de-una-imagen)  
-[Tarea 4: Circulo zona mas clara y oscura](#tarea-4-círculo-zona-mas-clara-y-oscura)  
+[Circulo zona mas clara y oscura](#tarea-4-círculo-zona-mas-clara-y-oscura)  
 
 ### Preparación
 
