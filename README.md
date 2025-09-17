@@ -71,8 +71,8 @@ Decidí hacer una viñeta de 2x3 imagenes con las siguientes características:
 
 - Normal (la imágen sin tocarla)
 
-- Cartoon: Mostrar la imágen con un filtro marcando las líneas de negro. Para ello tuve que utilizar tanto ´´´cv2.medianBlur(gray, 1)´´´ que elimina el ruido aplicandole un tamaño de kernel de 3 además de ´´´cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 9, 9)´´´ que se encarga de generar la imágen con todos los bordes. Por último la combino con los bordes obtenidos anteriormente con ´´´cv2.bitwise_and(img, img, mask=edges)´´´
-- Sketch: Parecido al anterior pero en blanco y negro estilo comic. Para ello convierto la imagen a escala de grises, invierto los colores claros y oscuros, le aplico un filtro con ´´´cv2.GaussianBlur(inv, (21,21), 0)´´´ y por último con ´´´cv2.divide(gray, 255-blur, scale=256)´´´ genero el efecto de dibujado a lapiz.
+- Cartoon: Mostrar la imágen con un filtro marcando las líneas de negro. Para ello tuve que utilizar tanto ```cv2.medianBlur(gray, 1)``` que elimina el ruido aplicandole un tamaño de kernel de 3 además de ```cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 9, 9)``` que se encarga de generar la imágen con todos los bordes. Por último la combino con los bordes obtenidos anteriormente con ```cv2.bitwise_and(img, img, mask=edges)```
+- Sketch: Parecido al anterior pero en blanco y negro estilo comic. Para ello convierto la imagen a escala de grises, invierto los colores claros y oscuros, le aplico un filtro con ```cv2.GaussianBlur(inv, (21,21), 0)``` y por último con ```cv2.divide(gray, 255-blur, scale=256)``` genero el efecto de dibujado a lapiz.
 
 - Pixel Art: La técnica aqui es reducir a un tamaño pequeño la imagen y posteriormente volver a aumentarla al tamaño original pero sin suavizarla
 
