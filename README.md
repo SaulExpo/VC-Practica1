@@ -7,6 +7,8 @@
 [Imagen estilo Mondrian](#tarea-2-imagen-estilo-mondrian)  
 [Modificar el plano de una imágen](#tarea-3-modificar-el-plano-de-una-imagen)  
 [Circulo zona mas clara y oscura](#tarea-4-círculo-zona-mas-clara-y-oscura)  
+[Pop Art Personalizado](#tarea-5-pop-art-personalizado)  
+
 
 ### Preparación
 
@@ -60,3 +62,20 @@ Como antes se pasa la imágen a escala de grises y ahora se crearan además de l
 Para ello se realizará un doble bucle for para saltar de 8 en 8 tanto vertical como horizontalmente y dentro de ese bloque obtener la media de los pixeles con np.mean y en caso de que sea mas claro o mas oscuro incluirlo en las variables auxiliares antes mencionadas
 
 Para acabar se hacen los circulos de la misma manera que antes.
+
+### Tarea 5: Pop Art Personalizado
+
+A la hora de inventarme un pop art decidí buscar ejemplos por internet que me gustarán y una vez encontré algunas ideas intenté por medio de la IA descubrir como podría recrearlos.
+
+Decidí hacer una viñeta de 2x3 imagenes con las siguientes características:
+
+- Normal (la imágen sin tocarla)
+
+- Cartoon: Mostrar la imágen con un filtro marcando las líneas de negro. Para ello tuve que utilizar tanto ´´´cv2.medianBlur(gray, 1)´´´ que elimina el ruido aplicandole un tamaño de kernel de 3 además de ´´´cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 9, 9)´´´ que se encarga de generar la imágen con todos los bordes. Por último la combino con los bordes obtenidos anteriormente con ´´´cv2.bitwise_and(img, img, mask=edges)´´´
+- Sketch: Parecido al anterior pero en blanco y negro estilo comic. Para ello convierto la imagen a escala de grises, invierto los colores claros y oscuros, le aplico un filtro con ´´´cv2.GaussianBlur(inv, (21,21), 0)´´´ y por último con ´´´cv2.divide(gray, 255-blur, scale=256)´´´ genero el efecto de dibujado a lapiz.
+
+- Pixel Art: La técnica aqui es reducir a un tamaño pequeño la imagen y posteriormente volver a aumentarla al tamaño original pero sin suavizarla
+
+- Halloween: Esta idea se me ocurrió por la fecha actual. Se basa en aplicar un filtro naranja a la vez que se crea una especie de mascara oscura al rededor de la imágen.
+
+- Negativo: Invertir los colores de la imágen
