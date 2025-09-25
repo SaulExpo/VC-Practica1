@@ -78,4 +78,6 @@ Decidí hacer una viñeta de 2x3 imagenes con las siguientes características:
 
 - Halloween: Esta idea se me ocurrió por la fecha actual. Se basa en aplicar un filtro naranja a la vez que se crea una especie de mascara oscura al rededor de la imágen.
 
-- Negativo: Invertir los colores de la imágen
+- Negativo: Invertir los colores de la imágen 
+
+Saúl Expósito Morales
